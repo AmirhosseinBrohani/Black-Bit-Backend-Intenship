@@ -14,24 +14,24 @@ for i in range(k):
     ex = x - 1
     ey = y - 1
     mmap[ex][ey] = "*"
-    if ex - 1 >= 0 and mmap[ex - 1][ey] != "*":  # bala
+    if ex - 1 >= 0 and mmap[ex - 1][ey] != "*":  # top
         mmap[ex - 1][ey] += 1
 
-        if ey - 1 >= 0 and mmap[ex - 1][ey - 1] != "*":  # chapbala
+        if ey - 1 >= 0 and mmap[ex - 1][ey - 1] != "*":  # top-left-corner
             mmap[ex - 1][ey - 1] += 1
 
-        if ey + 1 <= m - 1 and mmap[ex - 1][ey + 1] != "*":  # rastbala
+        if ey + 1 <= m - 1 and mmap[ex - 1][ey + 1] != "*":  # top-right-corner
             mmap[ex - 1][ey + 1] += 1
-    if ex + 1 <= n - 1 and mmap[ex + 1][ey] != "*":  # paeen
+    if ex + 1 <= n - 1 and mmap[ex + 1][ey] != "*":  # down
         mmap[ex + 1][ey] += 1
 
-        if ey - 1 >= 0 and mmap[ex + 1][ey - 1] != "*":  # chappaeen
+        if ey - 1 >= 0 and mmap[ex + 1][ey - 1] != "*":  # down-left-corner
             mmap[ex + 1][ey - 1] += 1
-        if ey + 1 <= m - 1 and mmap[ex + 1][ey + 1] != "*":  # rastpaeen
+        if ey + 1 <= m - 1 and mmap[ex + 1][ey + 1] != "*":  # down-right-corner
             mmap[ex + 1][ey + 1] += 1
-    if ey - 1 >= 0 and mmap[ex][ey - 1] != "*":  # chap
+    if ey - 1 >= 0 and mmap[ex][ey - 1] != "*":  # left
         mmap[ex][ey - 1] += 1
-    if ey + 1 <= m - 1 and mmap[ex][ey + 1] != "*":  # rast
+    if ey + 1 <= m - 1 and mmap[ex][ey + 1] != "*":  # right
         mmap[ex][ey + 1] += 1
 
 
